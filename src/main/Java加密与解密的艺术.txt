@@ -1,0 +1,2 @@
+Sun公司的加密文件下载地址 : http://java.sun.com/javase/downloads/index.jsp,
+jdk8的JCE适合的下载地址  : https://www.oracle.com/technetwork/cn/java/javase/downloads/jce8-download-2133166-zhs.html
