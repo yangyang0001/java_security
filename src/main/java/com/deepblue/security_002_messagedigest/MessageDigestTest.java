@@ -21,7 +21,7 @@ public class MessageDigestTest {
                 String algorithm = digest.getAlgorithm();
                 digest.update(update);
                 byte[] value = digest.digest();
-                System.out.println("value:" + JSON.toJSONString(value) + ",name:" + provider.getName() + ",version:" + provider.getVersion() + ", algorithm:" + algorithm);
+                System.out.println("algorithm:" + algorithm + "\t,name:" + provider.getName() + "\t,version:" + provider.getVersion() + "\t,value:" + JSON.toJSONString(value));
             } catch (Exception e) {
                 e.printStackTrace();
             }
