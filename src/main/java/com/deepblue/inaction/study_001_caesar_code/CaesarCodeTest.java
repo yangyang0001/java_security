@@ -1,4 +1,4 @@
-package com.deepblue.inaction.study_001_kaisa;
+package com.deepblue.inaction.study_001_caesar_code;
 
 /**
  * 凯撒秘密 移位密码
@@ -8,7 +8,7 @@ package com.deepblue.inaction.study_001_kaisa;
  * 秘文:
  * A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
  */
-public class KaiSATest {
+public class CaesarCodeTest {
     
     private static String MI_STR = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
