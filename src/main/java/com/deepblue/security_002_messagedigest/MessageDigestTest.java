@@ -2,12 +2,10 @@ package com.deepblue.security_002_messagedigest;
 
 import com.alibaba.fastjson.JSON;
 import com.deepblue.common.Constant;
-import com.google.common.collect.Lists;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
-import java.util.List;
 
 public class MessageDigestTest {
 
