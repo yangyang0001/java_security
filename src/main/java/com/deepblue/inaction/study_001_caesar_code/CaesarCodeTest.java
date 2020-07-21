@@ -27,7 +27,6 @@ public class CaesarCodeTest {
         for (int i = 0; i < 26; i++) {
             String result = parseSecurity("PELCGBTENCUL", i);
             System.out.println("秘钥为:\t" + i + ",\t结果:\t" + result);
-
         }
     }
     
