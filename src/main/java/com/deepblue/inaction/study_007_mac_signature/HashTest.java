@@ -27,6 +27,7 @@ public class HashTest {
 
         /**SHA-1 列, SHA-2系列, SHA-3系列(没有提供这种散列算法)*/
 //        String algorithm = AlgorithmConstant.SHA1.getName();   // 散列值长度: 20字节
+//        String algorithm = AlgorithmConstant.SHA224.getName(); // 散列值长度: 28字节
         String algorithm = AlgorithmConstant.SHA256.getName(); // 散列值长度: 32字节
 //        String algorithm = AlgorithmConstant.SHA384.getName(); // 散列值长度: 48字节
 //        String algorithm = AlgorithmConstant.SHA512.getName(); // 散列值长度: 64字节
