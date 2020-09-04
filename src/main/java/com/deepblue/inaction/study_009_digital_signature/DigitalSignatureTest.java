@@ -9,11 +9,9 @@ import java.security.NoSuchAlgorithmException;
 public class DigitalSignatureTest {
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        MessageDigest digest = MessageDigest.getInstance("RSA");
-
-
-
-
+        String reason = "就是拒绝";
+        String format = String.format("您的封面不符合封面要求：(%s)，请重新上传", reason);
+        System.out.println("format template:" + format);
     }
 
 }
