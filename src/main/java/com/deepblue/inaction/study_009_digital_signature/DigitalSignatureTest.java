@@ -1,17 +1,36 @@
 package com.deepblue.inaction.study_009_digital_signature;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import com.deepblue.common.AlgorithmConstant;
+import com.deepblue.util.HexUtil;
+import org.bouncycastle.util.encoders.Hex;
+
+import javax.crypto.KeyGenerator;
+import java.security.*;
 
 /**
- * 数字签名和认证
+ * 数字签名和验证
  */
 public class DigitalSignatureTest {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
-        String reason = "就是拒绝";
-        String format = String.format("您的封面不符合封面要求：(%s)，请重新上传", reason);
-        System.out.println("format template:" + format);
+    public static void main(String[] args) throws Exception {
+        byte[] bytes = "Digital Signature".getBytes();
+        String algorithm = AlgorithmConstant.RSA.getName();
+        KeyPairGenerator generator = KeyPairGenerator.getInstance(algorithm);
+        generator.initialize(512);
+        KeyPair keyPair = generator.generateKeyPair();
+        Signature signature = Signature.getInstance(generator.getAlgorithm());
+
+        signature.initSign(keyPair.getPrivate());
+        signature.update(bytes);
+
+        byte[] sign = signature.sign();
+        System.out.println("signature :" + HexUtil.getHexByBytes(sign) + ", signature.length :" + HexUtil.getHexByBytes(sign).length());
+
+        signature.initVerify(keyPair.getPublic());
+        signature.update(bytes);
+
+        System.out.println("verify    :" + signature.verify(sign));
+
     }
 
 }
