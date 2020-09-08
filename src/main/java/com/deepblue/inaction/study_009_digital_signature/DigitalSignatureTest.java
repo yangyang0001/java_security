@@ -2,9 +2,6 @@ package com.deepblue.inaction.study_009_digital_signature;
 
 import com.deepblue.common.AlgorithmConstant;
 import com.deepblue.util.HexUtil;
-import org.bouncycastle.util.encoders.Hex;
-
-import javax.crypto.KeyGenerator;
 import java.security.*;
 
 /**
