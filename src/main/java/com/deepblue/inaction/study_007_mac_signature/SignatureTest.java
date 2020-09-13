@@ -17,6 +17,8 @@ public class SignatureTest {
 
     public static void main(String[] args) throws Exception {
 
+
+
         String filePath = "/Users/yangjianwei/IdeaProjects/java_security/src/main/java/com/deepblue/inaction/study_007_mac_signature/mac.txt";
         InputStream in = new FileInputStream(filePath);
         BufferedInputStream bis = new BufferedInputStream(in);
@@ -25,12 +27,11 @@ public class SignatureTest {
         FilePrintUtil.print(buffer);
 
         String algorithm = AlgorithmConstant.RSA.getName();
-        Signature signature = Signature.getInstance(algorithm);
-
-        KeyPairGenerator generator = KeyPairGenerator.getInstance(signature.getAlgorithm());
+        KeyPairGenerator generator = KeyPairGenerator.getInstance(algorithm);
         generator.initialize(512);
         KeyPair keyPair = generator.generateKeyPair();
 
+        Signature signature = Signature.getInstance(algorithm);
         signature.initSign(keyPair.getPrivate());
         signature.update(buffer);
         byte[] sign = signature.sign();
@@ -39,7 +40,9 @@ public class SignatureTest {
         signature.initVerify(keyPair.getPublic());
         signature.update(buffer);
         boolean verify = signature.verify(sign);
+
         System.out.println("verify     :" + verify);
+
 
     }
 }
