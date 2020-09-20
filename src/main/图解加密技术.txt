@@ -134,9 +134,8 @@
 
 
 
-第十三章 PGP
-
-
+第十三章 GPG
+1、GnuPG 的使用
 yangjianwei@yangjianweideMacBook-Pro ~ % gpg --version
 gpg (GnuPG) 2.2.23
 libgcrypt 1.8.6
