@@ -134,6 +134,113 @@
 
 
 
+第十三章 PGP
+
+
+yangjianwei@yangjianweideMacBook-Pro ~ % gpg --version
+gpg (GnuPG) 2.2.23
+libgcrypt 1.8.6
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /Users/yangjianwei/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+
+yangjianwei@yangjianweideMacBook-Pro ~ % gpg2 --full-gen-key
+gpg (GnuPG) 2.2.23; Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 2048
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at 六  9/18 00:27:40 2021 CST
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: 杨建伟
+Email address: 2017585616@qq.com
+Comment: 杨建伟生成密钥备注
+You are using the 'utf-8' character set.
+You selected this USER-ID:
+    "杨建伟 (杨建伟生成密钥备注) <2017585616@qq.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /Users/yangjianwei/.gnupg/trustdb.gpg: trustdb created
+gpg: key E7FE9C156F8C136A marked as ultimately trusted
+gpg: directory '/Users/yangjianwei/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/Users/yangjianwei/.gnupg/openpgp-revocs.d/2AE766AA0CA8E9EF71891547E7FE9C156F8C136A.rev'
+public and secret key created and signed.
+
+pub   rsa2048 2020-09-17 [SC] [expires: 2021-09-17]
+      2AE766AA0CA8E9EF71891547E7FE9C156F8C136A
+uid                      杨建伟 (杨建伟生成密钥备注) <2017585616@qq.com>
+sub   rsa2048 2020-09-17 [E] [expires: 2021-09-17]
+
+yangjianwei@yangjianweideMacBook-Pro ~ % gpg2 --export --armor E7FE9C156F8C136A
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQENBF9jjyABCADhS4Wqeh5bsWxx/A+mhlM+Xdm24l6w70dl52sITyOsTwVw8drz
+R5YkollsdB/TiSwpN+xBVPF1dZLVj9KlvaAAGUB0t3kvvWnXXUnT13DlQP3xBJwS
+nchr391EZ3V/9OXZCIScYsu8cgsai8QxB+N2KLV2m2+EzTOvRzT6kpW6HV3yDdOI
+RBpEIgT8wvHzo5itK+ZlyCGqW5bTtv4pgtW0H6jWojxHfOh3588Dbe+Y8WCW8NAU
+mYaQMvJR+GhKCS5wdK0ZV1xoVxzgD8EDiM4ABxAMSoqgvwZEvccdp5XXHFLdH3L9
+h+3umOBskiOevZgQCbzcimBgbptAGA1hY2LfABEBAAG0O+adqOW7uuS8nyAo5p2o
+5bu65Lyf55Sf5oiQ5a+G6ZKl5aSH5rOoKSA8MjAxNzU4NTYxNkBxcS5jb20+iQFU
+BBMBCAA+FiEEKudmqgyo6e9xiRVH5/6cFW+ME2oFAl9jjyACGwMFCQHhM4AFCwkI
+BwIGFQoJCAsCBBYCAwECHgECF4AACgkQ5/6cFW+ME2otoAf/Zh5WXgGu4mmNuKKn
+2V7cOuntQ22IiBLlK8eL9MZaChGnMZKJF01KkL4ZIKjCaslMXO53rHQw0UCMb3wH
+YAR9s3HUYTf52GQnOZB5Ip1vaH6e6+MApzJ6JS1WDqo5pQ5SkNW7ulG/RoU8Nccl
+/NUj3ap++jQG+75eDfJmWstZNPpMwqnhAfMJU2VA1CgAjl4sIWjlKN1tHr7otzFi
+UefhXcd+5DPKaGRp2rsvQt8rq1ekHmdKfMEO1trP64NFP7tINhnS65E92SDtipCx
+HPNYA1TxSSwBxMYlERQjj4dsVBth2zKRKwPGW4TCmrHrlxdSkVMcqeI/pffMgzWG
+9VZYcrkBDQRfY48gAQgAxSsn0SL5fglQPhZDLMO8lULiIqnETrnPLRZc4gKeJ0wa
+JL2k9baUMf2eg4os/am/QzI9HtoNhXVrJEd2bfQObyOQt2eV3tBlwe5RSMTRqxFX
+fQe+GyQe2CO42G/9plgfM+OvYUHU/Ps3Ms+sP0XNC9n55JRGRtkaPYWuhmYI4LbP
+Rv1ZatFXEy1bIJ416X5mbHg0xmxMmCRIjbP3CJP7atZ/agEfnEhbLQpxwVqaqzdk
+8xpulwoJ+CS7uIz/6b4dSj9AQwMAdledPCzhls39T6Yoq6s6cuBN9jS/rvQMmQin
+u8wYWU33pooZ9jSBNHhpDGXYMV97Q/agpB4GG3WExwARAQABiQE8BBgBCAAmFiEE
+Kudmqgyo6e9xiRVH5/6cFW+ME2oFAl9jjyACGwwFCQHhM4AACgkQ5/6cFW+ME2qn
+GwgAuIt5pY9uLuT3LbFDJo711M8j278DLzKVbJ2lAOhUPwJ3m9Qhd1SzZtyR53Sc
+POFztHFJy8/j6YZq6YdDPfKZDsmfTOf1zUpsBIUeUqmJtCaWQ72tMDoCk1cth6A1
+ypNwt5KytSY+0pbMkXKgUOEiZ7itxCwd1e7ovapfpT32WdMoV3PK8fC4tDXE3BaM
+4pH89iNjbPJ3qCuUSySgb4ABLGKgubHUJ5irOvo29LAoilXhEl78/V0RhhI2bqtT
+IuemuLRhD+97r9ypvebM/8BLUrQ8cvDWqDQS46v/96gTBnG9tOvl8SdD2SZlxigN
+yKEpTeBDjaWtvLlmaKDKdq8+tw==
+=1r9d
+-----END PGP PUBLIC KEY BLOCK-----
+
+
 
 
 
