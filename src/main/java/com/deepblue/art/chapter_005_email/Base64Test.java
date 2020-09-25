@@ -11,9 +11,11 @@ public class Base64Test {
     public static void main(String[] args) throws Exception {
         String msg = "Java加密与解密的艺术";
         String encode = Base64.encodeBase64String(msg.getBytes());
-        System.out.println(encode);
-
-
+        byte[] bytes = Base64.decodeBase64(encode);
+        String decode = new String(bytes);
+        System.out.println("原文:" + msg);
+        System.out.println("encode:" + encode);
+        System.out.println("decode:" + decode);
     }
 
 }
