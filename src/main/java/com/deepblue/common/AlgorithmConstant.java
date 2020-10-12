@@ -10,7 +10,8 @@ public enum AlgorithmConstant {
     HmacMD5("HmacMD5"), HmacSHA1("HmacSHA1"), HmacSHA256("HmacSHA256"), HmacSHA384("HmacSHA384"), HmacSHA512("HmacSHA512"),
 
     // 对称加密算法中最好的 对称加密算法
-    AES("AES"), DES("DES"), DESede("DESede"),IDEA("IDEA"), PBE("PBE"),
+    AES("AES"), DES("DES"), DESede("DESede"),IDEA("IDEA"),
+    PBEWithMD5AndDES("PBEWithMD5AndDES"),
 
     // 非对称加密算法
     RSA("RSA"), DSA("DSA"), DH("DH"), ECDH("ECDH");
