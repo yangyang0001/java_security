@@ -1,6 +1,8 @@
 package com.deepblue.common;
 
 
+import org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi;
+
 public enum AlgorithmConstant {
 
 
@@ -14,7 +16,10 @@ public enum AlgorithmConstant {
     PBEWithMD5AndDES("PBEWithMD5AndDES"),
 
     // 非对称加密算法
-    RSA("RSA"), ELGAMAL("ElGamal"), DSA("DSA"), DH("DH"), ECDH("ECDH");
+    RSA("RSA"), ELGAMAL("ElGamal"), DSA("DSA"), DH("DH"), ECDH("ECDH"),
+
+    // 数字签名算法
+    MD5withRSA("MD5withRSA"), SHA1withDSA("SHA1withDSA");
 
 
     private String name;
