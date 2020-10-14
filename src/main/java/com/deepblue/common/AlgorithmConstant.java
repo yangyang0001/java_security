@@ -14,7 +14,7 @@ public enum AlgorithmConstant {
     PBEWithMD5AndDES("PBEWithMD5AndDES"),
 
     // 非对称加密算法
-    RSA("RSA"), DSA("DSA"), DH("DH"), ECDH("ECDH");
+    RSA("RSA"), ELGAMAL("ElGamal"), DSA("DSA"), DH("DH"), ECDH("ECDH");
 
 
     private String name;
