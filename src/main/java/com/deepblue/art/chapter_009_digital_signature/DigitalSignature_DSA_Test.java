@@ -10,6 +10,9 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Map;
 
+/**
+ * 标准数字签名算法
+ */
 public class DigitalSignature_DSA_Test {
 
     public static final String KEY_ALGORITHM = AlgorithmConstant.DSA.getName();

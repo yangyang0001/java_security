@@ -9,6 +9,9 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Map;
 
+/**
+ * 经典数字签名算法
+ */
 public class DigitalSignature_RSA_Test {
 
     public static final String KEY_ALGORITHM = AlgorithmConstant.RSA.getName();
