@@ -3,6 +3,7 @@ package com.deepblue.art.chapter_009_digital_signature;
 import com.deepblue.common.AlgorithmConstant;
 import com.deepblue.util.HexUtil;
 import com.google.common.collect.Maps;
+import org.apache.commons.codec.binary.Base64;
 
 import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
@@ -39,6 +40,7 @@ public class DigitalSignature_RSA_Test {
 
         System.out.println("签名消息 :" + message);
         System.out.println("数字签名 :" + HexUtil.getHexByBytes(signature));
+        System.out.println("签名长度 :" + HexUtil.getHexByBytes(signature).length());
         System.out.println("认证结果 :" + verify);
 
     }

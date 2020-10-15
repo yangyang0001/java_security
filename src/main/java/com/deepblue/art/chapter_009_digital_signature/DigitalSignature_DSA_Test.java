@@ -42,6 +42,7 @@ public class DigitalSignature_DSA_Test {
 
         System.out.println("签名消息 :" + message);
         System.out.println("数字签名 :" + HexUtil.getHexByBytes(signature));
+        System.out.println("签名长度 :" + HexUtil.getHexByBytes(signature).length());
         System.out.println("认证结果 :" + verify);
 
     }
